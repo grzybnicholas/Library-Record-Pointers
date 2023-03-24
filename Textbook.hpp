@@ -91,8 +91,8 @@ class Textbook : public Book
 "[title_] is written by [author_] for [grade_level_] students. Subject: [subject_]. [It has/ It does not have] review questions. Page Count: [page_count_]. [It is / It is not] available digitally.\n" 
 
 */ 
-virtual void display() override;
-virtual void displayFilter(std::string& key) override;
+ void display() override;
+ void displayFilter(std::string& key) override;
 
   private:
     std::string subject_; // a string the represents the subject of the book

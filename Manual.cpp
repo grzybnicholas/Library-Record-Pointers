@@ -8,7 +8,6 @@ Implementation of the manual class
 
 
 #include "Manual.hpp"
-#include <string>
 
 
 /**
@@ -151,11 +150,6 @@ void Manual::display(){
      if(isDigital() == 0){
         digital = "It is not";
     }
-    for(int i = 0; i < device_.length(); i++){
-       if(device_[i] == '-'){
-       new_device = device_.substr(0, position);
-    }
-   }
     std::cout << getTitle() << " is written by " << getAuthor() << " company for device: " << new_device << ". Website: " << website_ << ". Page Count: "<< getPageCount()<< ". " << digital << " available digitally.\n";
 }
   /**

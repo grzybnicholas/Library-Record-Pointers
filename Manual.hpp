@@ -10,6 +10,7 @@ Interface of the manual class
 #define MANUAL_HPP_
 #include "Book.hpp"
 #include <regex>
+#include <string>
 
 
 class Manual : public Book
