@@ -36,8 +36,6 @@ LibraryRecord::LibraryRecord(std::string infile){
     int book = 0;
     std::string level = "";                                              
     bool is_digital = false, has_film_adaptation = false, has_review_questions = false;
-    
-
     std::istringstream reading(line);
     getline(reading, title, ',');
     getline(reading, author, ',');
