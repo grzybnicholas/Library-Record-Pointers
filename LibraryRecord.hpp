@@ -21,7 +21,7 @@ Interface of the LibraryRecord class
 class LibraryRecord : public ArrayBag<Book*>{
   public:
     LibraryRecord(); //default constructor
-    LibraryRecord(std::string input_file); //parameteized constructor for 
+    LibraryRecord(std::string input_file); //parameteized constructor that takes the input of a csv file
 
     /** @param:   A reference to a Book object to be checked in
       @return:  returns true if a book was successfully added to items, false otherwise

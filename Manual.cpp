@@ -50,7 +50,10 @@ Manual::Manual(std::string name, std::string author, int page_count, std::string
   if (regex_match(url,pattern)) {
     website_ = url;
     has_website_ = true;
-  }
+  }else if(url == "NONE"){
+    website_ = "NONE";
+    has_website_ = false;
+    }
   else {
     website_ = "";
     has_website_ = false;
@@ -106,10 +109,7 @@ bool Manual::setWebsite(const std::string& site)
   
   if (regex_match(site,pattern)) {
     website_ = site;
-  }else if(site == "NONE"){
-    website_ = "NONE";
-    has_website_ = false;
-    }else{
+  }else{
     website_ = "Broken Link";
     has_website_ = false;
   }
