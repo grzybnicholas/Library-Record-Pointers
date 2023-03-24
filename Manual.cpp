@@ -145,12 +145,10 @@ void Manual::setVisualAid(const bool& aid)
 */
 void Manual::display(){
     std::string digital = "It is";
-    std::string new_device = "";
-    int position = 0;
      if(isDigital() == 0){
         digital = "It is not";
     }
-    std::cout << getTitle() << " is written by " << getAuthor() << " company for device: " << new_device << ". Website: " << website_ << ". Page Count: "<< getPageCount()<< ". " << digital << " available digitally.\n";
+    std::cout << getTitle() << " is written by " << getAuthor() << " company for device: " << device_ << ". Website: " << website_ << ". Page Count: "<< getPageCount()<< ". " << digital << " available digitally.\n";
 }
   /**
 
