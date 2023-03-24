@@ -186,8 +186,8 @@ void Novel::calculateAverageRating()
   @post     : calls display() if the key argument is equal to genre_ (e.g. "horror")   
 
   */
-void Novel::displayFilter(std::string& genre){
-  if(genre == genre_){
+void Novel::displayFilter(std::string& key){
+  if(key == genre_){
     display();
   }
 }

@@ -137,8 +137,8 @@ void Textbook::display(){
   @post     : calls display() if the key argument is equal to subject_ (e.g. "mathematics")   
 
   */
- void Textbook::displayFilter(std::string& subject){
-    if(subject == subject_){
+ void Textbook::displayFilter(std::string& key){
+    if(key == subject_){
         display();
     }
  }

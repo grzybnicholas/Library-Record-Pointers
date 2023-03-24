@@ -92,7 +92,7 @@ class Textbook : public Book
 
 */ 
 virtual void display() override;
-virtual void displayFilter(std::string& subject) override;
+virtual void displayFilter(std::string& key) override;
 
   private:
     std::string subject_; // a string the represents the subject of the book

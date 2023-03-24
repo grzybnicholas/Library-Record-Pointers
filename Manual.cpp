@@ -165,16 +165,16 @@ void Manual::display(){
   @post     : calls display() if the key argument is equal to device_ (e.g. "Oven")   
 
   */
-void Manual::displayFilter(std::string& device){
+void Manual::displayFilter(std::string& key){
 int position = 0;
 std::string sub = getDevice();
-for(int i = 0; i < device.length(); i++){
+for(int i = 0; i < device_.length(); i++){
  if(device_[i] == '-'){
     position = i;
    sub = device_.substr(0, position);
  }
 }
-if(device == sub){
+if(key == sub){
     display();
 }
 }

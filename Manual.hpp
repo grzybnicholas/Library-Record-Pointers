@@ -113,7 +113,7 @@ Manual();
   @post     : calls display() if the key argument is equal to device_ (e.g. "Oven")   
 
   */
- void displayFilter(std::string& device) override;
+ void displayFilter(std::string& key) override;
 
   private:
     std::string website_; // a string that represents a url
