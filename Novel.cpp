@@ -170,12 +170,12 @@ void Novel::calculateAverageRating()
   */
  void Novel::display(){
     std::string digital = "It is";
-    std::string adapt = "It is"; 
-    if(isDigital() == 0){
+    std::string adapt = "It has"; 
+    if(!isDigital()){
         digital = "It is not";
     }
     if(has_film_adaptation_ == 0){
-        adapt = "It is not";
+        adapt = "It does not have";
     }
     std::cout << getTitle() << " is written by " << getAuthor() <<". Genre: "<< genre_<<". "<< adapt << " a film adaptation. Page Count: "<< getPageCount() << ". " << digital << " available digitally.\n";
 }
