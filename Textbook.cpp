@@ -118,9 +118,12 @@ bool Textbook::checkReviewQuestions() const
 
 */ 
 void Textbook::display(){
-    std::string digita = (!isDigital()) ? "It is" : "It is not";
+    std::string digita = "It is";
     std::string review = "It has";
-    if(has_review_questions_ == 0){
+     if(!isDigital()){
+        digita = "It is not";
+    }
+    if(!checkReviewQuestions()){
         review = "It does not have";
     }
     std::cout << getTitle() << " is written by " << getAuthor() << " for " << grade_level_ << "students. Subject: " << subject_ <<". " << review << " review questions. Page Count: "<< getPageCount()<< ". " << digita << " available digitally.\n";
