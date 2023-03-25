@@ -117,16 +117,21 @@ bool Textbook::checkReviewQuestions() const
 "[title_] is written by [author_] for [grade_level_] students. Subject: [subject_]. [It has/ It does not have] review questions. Page Count: [page_count_]. [It is / It is not] available digitally.\n" 
 
 */ 
-void Textbook::display(){
-    std::string digita = "It is";
-    std::string review = "It has";
-     if(!isDigital()){
-        digita = "It is not";
-    }
-    if(!has_review_questions_){
-        review = "It does not have";
-    }
-    std::cout << getTitle() << " is written by " << getAuthor() << " for " << grade_level_ << " students. Subject: " << subject_ <<". " << review << " review questions. Page Count: "<< getPageCount()<< ". " << digita << " available digitally.\n";
+void Textbook::display() {
+  std::string review = "It has review questions.";
+  if (!has_review_questions_) {
+    review = "It does not have review questions.";
+  }
+
+  std::string digital = "It is available digitally.";
+  if (!isDigital()) {
+    digital= "It is not available digitally.";
+  }
+
+  std::cout << getTitle() << " is written by " << getAuthor() << " for " 
+            << getGradeLevel() << " students. Subject: " << getSubject() << ". " 
+            << review << " Page Count: " << getPageCount() << ". " 
+            << digital<< std::endl;
 }
 
 
