@@ -123,7 +123,7 @@ void Textbook::display(){
      if(!isDigital()){
         digita = "It is not";
     }
-    if(has_review_questions_ == 0){
+    if(!has_review_questions_){
         review = "It does not have";
     }
     std::cout << getTitle() << " is written by " << getAuthor() << " for " << grade_level_ << " students. Subject: " << subject_ <<". " << review << " review questions. Page Count: "<< getPageCount()<< ". " << digita << " available digitally.\n";
