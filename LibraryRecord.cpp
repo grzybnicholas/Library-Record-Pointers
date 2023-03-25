@@ -52,10 +52,10 @@ LibraryRecord::LibraryRecord(std::string infile){
     else if(level == "ELEMENTARY"){
       grade_l = ELEMENTARY;
     }
-    else if(level == "JUNIOR_HIGH"){
+    else if(level == "JUNIOR HIGH"){
       grade_l = JUNIOR_HIGH;
     }
-    else if (level == "HIGH_SCHOOL"){
+    else if (level == "HIGH SCHOOL"){
       grade_l = HIGH_SCHOOL;
     }
     else {

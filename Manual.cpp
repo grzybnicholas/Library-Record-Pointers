@@ -148,12 +148,6 @@ void Manual::display(){
      if(isDigital() == 0){
         digital = "It is not";
     }
-      if (website_ == "NONE") {
-    website_ = "NONE";
-  }
-  else if (website_ == "Broken Link") {
-    website_ = "Broken Link";
-  }
     std::cout << getTitle() << " is written by " << getAuthor() << " company for device: " << device_.substr(0, device_.rfind('-')) << ". Website: " << website_ << ". Page Count: "<< getPageCount()<< ". " << digital << " available digitally.\n";
 }
   /**
