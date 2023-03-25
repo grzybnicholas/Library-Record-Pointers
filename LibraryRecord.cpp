@@ -84,8 +84,15 @@ LibraryRecord::LibraryRecord(std::string infile){
     Book* tk = new Textbook(title, author, page_count, subject, is_digital, grade_l, has_review_questions);
     checkIn(tk);
   }else if(book == 3){
-    Book* m = new Manual(title, author, page_count, device, is_digital, website);
-    checkIn(m);
+       if(website == "NONE" || website == ""){ 
+        Book* m = new Manual(title, author, page_count, device, is_digital, website);
+        checkIn(m);
+      }
+      else{
+        Manual* man = new Manual(title, author,page_count, device, is_digital);
+        man->setWebsite(website);
+        checkIn(man);
+      }
   }
   }
 
