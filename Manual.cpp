@@ -49,10 +49,7 @@ Manual::Manual(std::string name, std::string author, int page_count, std::string
   if (regex_match(url,pattern)) {
     website_ = url;
     has_website_ = true;
-  }else if(url == "NONE"){
-    website_ = "NONE";
-    has_website_ = false;
-    }
+  }
   else {
     website_ = "";
     has_website_ = false;
